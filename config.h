@@ -2,14 +2,12 @@
 //created on : 17/05/2019
 //@uthor : Rajdeep
 
-//-----------------motor pins-----------------------
-#define motor0 2
-#define motor1 3
-#define motor2 4
-#define motor3 5
+//-----------------motor pins definations-----------------------
+#define motor_pin_0 5
+#define motor_pin_1 6
+#define motor_pin_2 10
+#define motor_pin_3 11
 
-//----------------motor speed-----------------------
-int m0=1000;
-int m1=1000;
-int m2=1000;
-int m3=1000;
+
+
+
