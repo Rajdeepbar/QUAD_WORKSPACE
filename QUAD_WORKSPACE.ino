@@ -1,3 +1,4 @@
+#if 0
 #include "includefile.h"
 
 void setup(){
@@ -8,3 +9,5 @@ void setup(){
 void loop(){
     motor_run(1200,1200,1200,1200);
 }
+
+#endif
