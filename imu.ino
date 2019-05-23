@@ -1,10 +1,11 @@
-#include "includefile.h"
 /* #####################################################################################
     Library for single MPU6050
     Author : Rajdeep
     Based on wire Library.
    ######################################################################################
+*/
 
+#include "includefile.h"
 //-----------------------------MPU6050 registers----------------------------------------
 int MPU_ADDR = 0x68; //with AD0 pulled down
 uint16_t PWR_MGMT_1 = 0x6B;   //register address of PWR_MGMT_1
@@ -138,9 +139,20 @@ void mpu_print_data(){
     Serial.print("Ax =");Serial.print(mpu_data.Ax);
     Serial.print("| Ay =");Serial.print(mpu_data.Ay);
     Serial.print("| Az =");Serial.print(mpu_data.Az);
-    Serial.print("Gx =");Serial.print(mpu_data.Gx);
     Serial.print("\t \t");
+    Serial.print("Gx =");Serial.print(mpu_data.Gx);
     Serial.print("| Gy =");Serial.print(mpu_data.Gy);
     Serial.print("| Gz =");Serial.print(mpu_data.Gz);
+    Serial.print("\n");
+}
+
+void mpu_print_raw_data(){
+    Serial.print("Ax =");Serial.print(mpu_raw_data.Ax-mpu_offset.Ax);
+    Serial.print("| Ay =");Serial.print(mpu_raw_data.Ay-mpu_offset.Ay);
+    Serial.print("| Az =");Serial.print(mpu_raw_data.Az-mpu_offset.Az);
+    Serial.print("\t \t");
+    Serial.print("Gx =");Serial.print(mpu_raw_data.Gx-mpu_offset.Gx);
+    Serial.print("| Gy =");Serial.print(mpu_raw_data.Gy-mpu_offset.Gy);
+    Serial.print("| Gz =");Serial.print(mpu_raw_data.Gz-mpu_offset.Gz);
     Serial.print("\n");
 }
