@@ -3,10 +3,19 @@
 //@uthor : Rajdeep
 
 //-----------------motor pins definations-----------------------
-#define motor_pin_0 5
-#define motor_pin_1 6
+#define motor_pin_0 6
+#define motor_pin_1 9
 #define motor_pin_2 10
 #define motor_pin_3 11
+
+//----------------interrupt pin for reciever -------------------
+#define yaw_pin 2
+#define pitch_pin 3
+#define roll_pin 4
+#define throttle_pin 5
+
+#define NO_PORTB_PINCHANGES
+#define NO_PORTC_PINCHANGES
 
 
 
