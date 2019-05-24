@@ -7,7 +7,9 @@ void setup(){
     reciever_init();
 }
 void loop(){
-    motor_run(1200,1200,1200,1200);
+    mpu_get_data();
+    update_control();
+    motor_run(motor_FL,motor_FR,motor_BR,motor_BL);
 }
 
 #endif

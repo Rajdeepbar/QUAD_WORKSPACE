@@ -28,7 +28,10 @@ void motor_init(){
     motor3.writeMicroseconds(m3);
     }
 
-
+//motor speed FL
+//motor speed FR
+//motor speed BR
+//motor speed FL
 void motor_run(int s0,int s1,int s2,int s3){
     motor0.writeMicroseconds(s0);
     motor1.writeMicroseconds(s1);

@@ -8,6 +8,10 @@
 #define motor_pin_2 10
 #define motor_pin_3 11
 
+#define motor_FL m0
+#define motor_FR m1
+#define motor_BR m3
+#define motor_BL m4
 //----------------interrupt pin for reciever -------------------
 #define yaw_pin 2
 #define pitch_pin 3
