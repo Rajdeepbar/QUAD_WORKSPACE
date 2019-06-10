@@ -5,7 +5,9 @@
    ######################################################################################
 */
 
+#ifndef INCLUDEFILE_H
 #include "includefile.h"
+#endif
 //-----------------------------MPU6050 registers----------------------------------------
 int MPU_ADDR = 0x68; //with AD0 pulled down
 uint16_t PWR_MGMT_1 = 0x6B;   //register address of PWR_MGMT_1
@@ -57,7 +59,8 @@ void mpu_init()
     Wire.write(PWR_MGMT_1); 
     Wire.write(pwr_mgmt_1); //sleep mode off + temp sensor disabled
     Wire.endTransmission(1);
-    mpu_set_constant();
+    mpu_constant.accel = 16348;
+    mpu_constant.gyro=131;
 }
 
 
@@ -73,32 +76,6 @@ void mpu_get_raw_data(){
     mpu_raw_data.Gx=(Wire.read()<<8)|Wire.read();
     mpu_raw_data.Gy=(Wire.read()<<8)|Wire.read();
     mpu_raw_data.Gz=(Wire.read()<<8)|Wire.read();
-}
-
-
-void mpu_set_constant(){
-    switch(accel_config){
-        case 0x00 : mpu_constant.accel = 16348;
-                    break;
-        case 0x0F : mpu_constant.accel = 8192;
-                    break;
-        case 0x10 : mpu_constant.accel = 4096;
-                    break;
-        case 0x1F : mpu_constant.accel = 2048;
-                    break;
-    }
-
-    switch (gyro_config)
-    {
-        case 0x00 : mpu_constant.gyro=131;
-                    break;
-        case 0x0F : mpu_constant.gyro=65.5;
-                    break;
-        case 0x10 : mpu_constant.gyro=32.8;
-                    break;
-        case 0x1F : mpu_constant.gyro=16.4;
-                    break;
-    }
 }
 
 void mpu_get_data(){

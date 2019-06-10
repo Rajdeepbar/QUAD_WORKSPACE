@@ -10,8 +10,9 @@
 
 #define motor_FL m0
 #define motor_FR m1
-#define motor_BR m3
-#define motor_BL m4
+#define motor_BR m2
+#define motor_BL m3
+
 //----------------interrupt pin for reciever -------------------
 #define yaw_pin 2
 #define pitch_pin 3
@@ -21,6 +22,6 @@
 #define NO_PORTB_PINCHANGES
 #define NO_PORTC_PINCHANGES
 
-
-
-
+//----------------esc-------------------------------------------
+#define max_speed 2000
+#define min_speed 1000

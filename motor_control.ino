@@ -1,10 +1,7 @@
+#ifndef INCLUDEFILE_H
 #include "includefile.h"
+#endif
 
-//----------------motor speed-----------------------
-int m0=1000;
-int m1=1000;
-int m2=1000;
-int m3=1000;
 
 //--------------create servo objects----------------
 Servo motor0;    
@@ -22,10 +19,12 @@ void motor_init(){
     motor3.attach(motor_pin_3);
 
     //write pwm pulse to esc
-    motor0.writeMicroseconds(m0);
-    motor1.writeMicroseconds(m1);
-    motor2.writeMicroseconds(m2);
-    motor3.writeMicroseconds(m3);
+    motor0.writeMicroseconds(min_speed);
+    motor1.writeMicroseconds(min_speed);
+    motor2.writeMicroseconds(min_speed);
+    motor3.writeMicroseconds(min_speed);
+
+    delay(5000);
     }
 
 //motor speed FL

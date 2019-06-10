@@ -2,14 +2,15 @@
 // 1 - for test mode 
 // 0 - for main 
 
+#ifndef INCLUDEFILE_H
 #include "includefile.h"
+#endif
 
 int speed ; 
 
 void setup(){
     Serial.begin(9600);
     motor_init();
-    motor_run(1000,1000,1000,1000);
     
 }
 void loop(){

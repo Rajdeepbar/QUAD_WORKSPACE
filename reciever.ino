@@ -1,4 +1,9 @@
-#include <includefile.h>
+// need more modification
+//arduino have only 3 software interrupt vector
+//upgrade processor for more interrupt vector
+#if 0
+
+#include "includefile.h"
 
 volatile unsigned long time_rising[4];
 volatile int time[4];
@@ -36,3 +41,5 @@ void falling(){
     time[interruptedPin-2]=time_rising[interrupted_pin-2]-micros;
     PCintPort::attachInterrupt(interruptedPin,&falling,FALLING);
 }
+
+#endif

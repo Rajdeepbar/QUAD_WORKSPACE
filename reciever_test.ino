@@ -1,22 +1,18 @@
-#if 0
+#if 1
 // 1 - for test mode 
 // 0 - for main 
 
 #ifndef INCLUDEFILE_H
 #include "includefile.h"
 #endif
-
-int speed ; 
-
+ 
 void setup(){
     Serial.begin(38400);
-    mpu_init();
-    mpu_set_offset(400,300,2000,-20,100,120);
-    
+    rc_init();   
 }
 void loop(){
-    mpu_get_data();
-    mpu_print_data();
+    rc_get_data;
+    rc_print_data;
 }
 
 #endif
