@@ -9,9 +9,9 @@
 int speed ; 
 
 void setup(){
-    Serial.begin(9600);
     motor_init();
-    
+    rc_init();
+    Serial.begin(9600);
 }
 void loop(){
     if(Serial.available()!=0){
@@ -20,7 +20,7 @@ void loop(){
     Serial.println(speed);
     Serial.flush();
     }
-    motor_run(speed,1000,1000,1000);
+    motor_run(speed,speed,speed,speed);
 }
 
 #endif

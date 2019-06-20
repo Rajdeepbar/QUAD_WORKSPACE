@@ -1,4 +1,4 @@
-#if 1
+#if 0
 // 1 - for test mode 
 // 0 - for main 
 
@@ -11,8 +11,8 @@ void setup(){
     rc_init();   
 }
 void loop(){
-    rc_get_data;
-    rc_print_data;
+    rc_get_data();
+    rc_print_data();
 }
 
 #endif

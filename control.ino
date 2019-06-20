@@ -2,10 +2,10 @@
 #include "includefile.h"
 #endif
 //--------------------------control constants-------------------------
-const float yaw_constant = 1;
-const float pitch_constant = 1;
-const float roll_constant = 1;
-const float throttle_constant = 1;
+const float yaw_constant = 20;
+const float pitch_constant = -20;
+const float roll_constant = -20;
+const float throttle_constant = 100;
 
 void update_control(){
     motor_FR = throttle_constant*reciever.throttle + pitch_constant*reciever.pitch + roll_constant*reciever.roll + yaw_constant*reciever.yaw;

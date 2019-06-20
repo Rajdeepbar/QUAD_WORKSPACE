@@ -14,10 +14,10 @@
 #define motor_BL m3
 
 //----------------interrupt pin for reciever -------------------
-#define yaw_pin 2
-#define pitch_pin 3
-#define roll_pin 4
-#define throttle_pin 5
+#define yaw_pin 5   //channel 4
+#define pitch_pin 3 //channel 2
+#define roll_pin 2 //channel 1
+#define throttle_pin 4  //channel 3
 
 #define NO_PORTB_PINCHANGES
 #define NO_PORTC_PINCHANGES

@@ -10,20 +10,29 @@ void rc_init(){
 }
 
 void rc_get_data(){
-    reciever.yaw=pulseIn(yaw_pin,HIGH,2000);
-    reciever.pitch=pulseIn(pitch_pin,HIGH,2000);
-    reciever.roll=pulseIn(roll_pin,HIGH,2000);
-    reciever.throttle=pulseIn(throttle_pin,HIGH,2000);
-    reciever.yaw=map(reciever.yaw,1300,1700,-10,10);
-    reciever.pitch=map(reciever.pitch,1300,1700,-10,10);
-    reciever.roll=map(reciever.roll,1300,1700,-10,10);
-    reciever.throttle=map(reciever.throttle,1300,1700,-10,10);
+    reciever.yaw=pulseIn(yaw_pin,HIGH);
+    reciever.pitch=pulseIn(pitch_pin,HIGH);
+    reciever.roll=pulseIn(roll_pin,HIGH);
+    reciever.throttle=pulseIn(throttle_pin,HIGH);
+    reciever.yaw=map(reciever.yaw,1120,1860,-5,5);
+    reciever.yaw++;
+    reciever.pitch=map(reciever.pitch,1170,1825,-5,5);
+    reciever.pitch++;
+    reciever.roll=map(reciever.roll,1125,1895,-5,5);
+    reciever.roll++;
+    reciever.throttle=map(reciever.throttle,1180,1790,10,20);
+    if(reciever.throttle==-9){
+        reciever.throttle=10;
+        reciever.yaw=0;
+        reciever.pitch=0;
+        reciever.roll=0;
+    }
 }
 
 void rc_print_data(){
-    Serial.print("CH1:");Serial.print(reciever.yaw);
-    Serial.print("| CH2:");Serial.print(reciever.pitch);
-    Serial.print("| CH3:");Serial.print(reciever.roll);
-    Serial.print("| CH4:");Serial.print(reciever.throttle);
+    Serial.print("Yaw:");Serial.print(reciever.yaw);
+    Serial.print("| Pitch:");Serial.print(reciever.pitch);
+    Serial.print("| Roll:");Serial.print(reciever.roll);
+    Serial.print("| Throttle:");Serial.print(reciever.throttle);
     Serial.print("\n");
 }
