@@ -1,6 +1,5 @@
 # QUAD_WORKSPACE
 ---under development---
 
-future additions:
+cureent work:
 # self stablisation
-# gps
