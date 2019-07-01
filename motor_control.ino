@@ -1,7 +1,4 @@
-#ifndef INCLUDEFILE_H
 #include "includefile.h"
-#endif
-
 
 //--------------create servo objects----------------
 Servo motor0;    

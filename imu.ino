@@ -5,9 +5,7 @@
    ######################################################################################
 */
 
-#ifndef INCLUDEFILE_H
 #include "includefile.h"
-#endif
 //-----------------------------MPU6050 registers----------------------------------------
 int MPU_ADDR = 0x68; //with AD0 pulled down
 uint16_t PWR_MGMT_1 = 0x6B;   //register address of PWR_MGMT_1

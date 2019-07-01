@@ -1,6 +1,4 @@
-#ifndef INCLUDEFILE_H
 #include "includefile.h"
-#endif
 
 void rc_init(){
     pinMode(yaw_pin,INPUT);

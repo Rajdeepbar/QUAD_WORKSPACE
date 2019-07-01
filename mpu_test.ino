@@ -2,9 +2,8 @@
 // 1 - for test mode 
 // 0 - for main 
 
-#ifndef INCLUDEFILE_H
+
 #include "includefile.h"
-#endif
 
 int speed ; 
 

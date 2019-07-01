@@ -1,6 +1,4 @@
-#ifndef INCLUDEFILE_H
 #include "includefile.h"
-#endif
 //--------------------------control constants-------------------------
 const float yaw_constant = 20;
 const float pitch_constant = -20;
