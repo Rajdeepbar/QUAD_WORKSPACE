@@ -1,8 +1,16 @@
-#include "includefile.h"
+/*
+####### Main Code for Quadcopter #######\
+Author: Rajdeep Barman
+mail  : rajdeep.flamestorm@gmail.com
 
+note - make sure that preprocessor tag is written 1 for this file and 0 for test files.
+The Mpu needs to be aligned properly with the body for this code to work properly. (the tedious calculations are not done yet).
+ */
+
+#include "includefile.h"
 struct RECIEVER {
     int yaw,pitch,roll,throttle;
-}reciever;
+}rx;
 
 //----------------motor speed-----------------------
 int m0=1000;
@@ -15,11 +23,11 @@ int m3=1000;
 void setup(){
     //Serial.begin(9600);
     motor_init();
-    //mpu_init();
+   // mpu_init();
     rc_init();
 }
 void loop(){
-    //mpu_get_data();
+  //  mpu_get_data();
     rc_get_data();
     update_control();
     motor_run(m0,m1,m2,m3);
